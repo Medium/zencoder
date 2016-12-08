@@ -1,7 +1,7 @@
 zencoder
 ========
 
-[![Build Status](https://travis-ci.org/brandscreen/zencoder.png)](https://travis-ci.org/brandscreen/zencoder) [![Coverage Status](https://coveralls.io/repos/brandscreen/zencoder/badge.png?branch=HEAD)](https://coveralls.io/r/brandscreen/zencoder?branch=HEAD)
+[![Build Status](https://travis-ci.org/go-zencoder/zencoder.png)](https://travis-ci.org/go-zencoder/zencoder) [![Coverage Status](https://coveralls.io/repos/go-zencoder/zencoder/badge.png?branch=HEAD)](https://coveralls.io/r/go-zencoder/zencoder?branch=HEAD)
 
 [Go](http://golang.org) integration for [Zencoder API](http://www.zencoder.com/) video transcoding service.
 
@@ -12,12 +12,12 @@ zencoder
 
 # Documentation
 
-[Godoc](http://godoc.org/) documentation is available at [http://godoc.org/github.com/brandscreen/zencoder](http://godoc.org/github.com/brandscreen/zencoder).
+[Godoc](http://godoc.org/) documentation is available at [http://godoc.org/github.com/go-zencoder/zencoder](http://godoc.org/github.com/go-zencoder/zencoder).
 
 # Installation
 
 ```bash
-$ go get github.com/brandscreen/zencoder
+$ go get github.com/go-zencoder/zencoder
 ```
 
 # Usage
@@ -27,7 +27,7 @@ $ go get github.com/brandscreen/zencoder
 Ensure you have imported the zencoder package at the top of your source file.
 
 ```golang
-import "github.com/brandscreen/zencoder"
+import "github.com/go-zencoder/zencoder"
 ```
 
 ## Create a connection to Zencoder
@@ -174,7 +174,7 @@ See [Zencoder API documentation](https://app.zencoder.com/docs/api/encoding) for
 
 # Contributing
 
-Please see [CONTRIBUTING.md](https://github.com/brandscreen/zencoder/blob/master/CONTRIBUTING.md).  If you have a bugfix or new feature that you would like to contribute, please find or open an issue about it first.
+Please see [CONTRIBUTING.md](https://github.com/go-zencoder/zencoder/blob/master/CONTRIBUTING.md).  If you have a bugfix or new feature that you would like to contribute, please find or open an issue about it first.
 
 # License
 
