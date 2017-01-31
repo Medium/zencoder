@@ -46,6 +46,7 @@ type NotificationSettings struct {
 }
 
 type StreamSettings struct {
+	Source     string `json:"source,omitempty"`     // References a label on another job and uses the video created by that output for processing instead of the input file.
 	Path       string `json:"path,omitempty"`       // Specifies the path to a stream manifest file
 	Bandwidth  int32  `json:"bandwidth,omitempty"`  // Specifies the bandwidth of a playlist stream
 	Resolution string `json:"resolution,omitempty"` // Specifies the resolution of a playlist stream
@@ -186,7 +187,7 @@ type OutputSettings struct {
 	SegmentVideoSnapshots bool              `json:"segment_video_snapshots,omitempty"`  // When segmenting a video file into audio-only segments, take snapshots of the video as thumbnails for each segment.
 	MaxHLSProtocolVersion int32             `json:"max_hls_protocol_version,omitempty"` // The maximum HLS protocol to use.
 	HLSOptimizedTS        bool              `json:"hls_optimized_ts,omitempty"`         // Optimize TS segment files for HTTP Live Streaming on iOS.
-	PrepareForSegmenting  string            `json:"prepare_for_segmenting,omitempty"`   // Include captions and keyframe timing for segmenting.
+	PrepareForSegmenting  []string          `json:"prepare_for_segmenting,omitempty"`   // Include captions and keyframe timing for segmenting.
 	InstantPlay           bool              `json:"instant_play,omitempty"`             // Create an instant play output that is ready for playback within seconds.
 	SMILBaseUrl           string            `json:"smil_base_url,omitempty"`            // Add <meta base="smil_base_url_value"/> to the <head> section of an SMIL playlist.
 
