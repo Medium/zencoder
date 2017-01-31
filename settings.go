@@ -180,16 +180,17 @@ type OutputSettings struct {
 	MaxDuration int32  `json:"max_duration,omitempty"` // Skip output if the input file is longer than the given duration, in seconds.
 
 	// Segmented Streaming
-	SegmentSeconds        int32             `json:"segment_seconds,omitempty"`          // Sets the maximum duration of each segment a segmented output
-	SegmentSize           int32             `json:"segment_size,omitempty"`             // Sets the maximum data size of each segment in a segmented output
-	Streams               []*StreamSettings `json:"streams,omitempty"`                  // Provides a list of stream info to be reformatted as a playlist
-	SegmentImageUrl       string            `json:"segment_image_url,omitempty"`        // An image to display on audio-only segments
-	SegmentVideoSnapshots bool              `json:"segment_video_snapshots,omitempty"`  // When segmenting a video file into audio-only segments, take snapshots of the video as thumbnails for each segment.
-	MaxHLSProtocolVersion int32             `json:"max_hls_protocol_version,omitempty"` // The maximum HLS protocol to use.
-	HLSOptimizedTS        bool              `json:"hls_optimized_ts,omitempty"`         // Optimize TS segment files for HTTP Live Streaming on iOS.
-	PrepareForSegmenting  []string          `json:"prepare_for_segmenting,omitempty"`   // Include captions and keyframe timing for segmenting.
-	InstantPlay           bool              `json:"instant_play,omitempty"`             // Create an instant play output that is ready for playback within seconds.
-	SMILBaseUrl           string            `json:"smil_base_url,omitempty"`            // Add <meta base="smil_base_url_value"/> to the <head> section of an SMIL playlist.
+	SegmentSeconds          int32             `json:"segment_seconds,omitempty"`           // Sets the maximum duration of each segment a segmented output
+	SegmentSize             int32             `json:"segment_size,omitempty"`              // Sets the maximum data size of each segment in a segmented output
+	Streams                 []*StreamSettings `json:"streams,omitempty"`                   // Provides a list of stream info to be reformatted as a playlist
+	SegmentImageUrl         string            `json:"segment_image_url,omitempty"`         // An image to display on audio-only segments
+	SegmentVideoSnapshots   bool              `json:"segment_video_snapshots,omitempty"`   // When segmenting a video file into audio-only segments, take snapshots of the video as thumbnails for each segment.
+	MaxHLSProtocolVersion   int32             `json:"max_hls_protocol_version,omitempty"`  // The maximum HLS protocol to use.
+	HLSOptimizedTS          bool              `json:"hls_optimized_ts,omitempty"`          // Optimize TS segment files for HTTP Live Streaming on iOS.
+	PrepareForSegmenting    []string          `json:"prepare_for_segmenting,omitempty"`    // Include captions and keyframe timing for segmenting.
+	InstantPlay             bool              `json:"instant_play,omitempty"`              // Create an instant play output that is ready for playback within seconds.
+	SMILBaseUrl             string            `json:"smil_base_url,omitempty"`             // Add <meta base="smil_base_url_value"/> to the <head> section of an SMIL playlist.
+	StreamingDeliveryFormat string            `json:"streaming_delivery_format,omitempty"` // Streaming delivery format
 
 	// Encryption
 	EncryptionMethod            string `json:"encryption_method,omitempty"`              // Set the encryption method to use for encrypting.
